@@ -1,0 +1,8 @@
+@using System.Security.Claims;
+
+<title>Access Denied !</title>
+@{
+    string name = ViewData[ClaimTypes.Name] as string;
+}
+
+<h1>@name, you do not have permission to view this page </h1>

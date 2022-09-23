@@ -1,0 +1,22 @@
+﻿@{
+    ViewData["Title"] = "Privacy Policy";
+}
+<h1>@ViewData["Title"]</h1>
+
+<p>Use this page to detail your site's privacy policy.</p>
+<p>Only Admin allowed</p>
+
+<h2>Token</h2>
+<p>
+    @{
+        if (!string.IsNullOrWhiteSpace(ViewData["JWToken"] as string))
+        {
+        <div><i>@ViewData["JWToken"]</i></div>
+        }
+        else
+        {
+        <div><i>You dont have token !</i></div>
+        }
+
+    }
+</p>

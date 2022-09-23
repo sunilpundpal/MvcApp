@@ -1,0 +1,17 @@
+@{
+    ViewData["Title"] = "Login";
+    var returnUrl = ViewData["ReturnUrl"] as string;
+
+    var actionUrl = "/login" + (!string.IsNullOrWhiteSpace(returnUrl) ? $"?returnUrl={returnUrl}" : "");
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<p>Login</p>
+<div>
+    <form action=@actionUrl method="post">
+        <input type="text" name="username" placeholder="Username" />
+        <input type="password" name="password" placeholder="Password" />
+        <input type="submit" value="Login" />
+    </form>
+</div>
