@@ -1,7 +1,7 @@
 
 using Microsoft.AspNetCore.Mvc;
 
-public static class ControllerBaseExtension
+public static class HttpContextExtensions
 {
     public static string UserName(this HttpContext httpContext)
     {
